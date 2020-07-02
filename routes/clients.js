@@ -2,7 +2,7 @@ const express = require("express");
 // const clientData = require('../data/ClientsApi');
 const fs = require('fs');
 const moment = require('moment');
-let rawdata = require('../client/src/components/data/clients.json');
+let rawdata = require('./../client/src/components/data/clients.json');
 let clientData = rawdata;
 
 
