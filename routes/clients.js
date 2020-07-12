@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
 
     const json = JSON.stringify(clientData);
 
-    fs.writeFile('./client/src/components/data/clients.json', json, 'utf8', function(err) {
+    fs.writeFile('./data/clients.json', json, 'utf8', function(err) {
         if (err) throw err;
         console.log('complete');
     });
@@ -70,7 +70,7 @@ router.put('/:id', (req, res) => {
 
                 const json = JSON.stringify(clientData);
 
-                fs.writeFile('./client/src/components/data/clients.json', json, 'utf8', function(err) {
+                fs.writeFile('./data/clients.json', json, 'utf8', function(err) {
                     if (err) throw err;
                     console.log('complete');
                 });
@@ -94,7 +94,7 @@ router.delete('/:id', (req, res) => {
         const json = JSON.stringify(clientData);
         console.log(`delete function data: ${json}`)
 
-        fs.writeFile('./client/src/components/data/clients.json', json, 'utf8', function(err) {
+        fs.writeFile('./data/clients.json', json, 'utf8', function(err) {
             if (err) throw err;
             console.log('complete');
         });
