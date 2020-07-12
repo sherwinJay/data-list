@@ -14,17 +14,17 @@ app.use('/clients/data', clientsRouter);
 
 // serve static assets if in production
 if (process.env.NODE_ENV === "production") {
-    // app.use(express.static("client/build"));
-    // // static folder
-    // console.log("Current directory:", __dirname); 
-    // app.get("*", (req, res) => {
-    //     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    // });
-    app.use(express.static(path.join(__dirname, 'build')));
-
-    app.get('/*', (req, res) => {
-     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    app.use(express.static("client/build"));
+    // static folder
+    console.log("Current directory:", __dirname); 
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "client-info", "client", "build", "index.html"));
     });
+    // app.use(express.static(path.join(__dirname, 'build')));
+
+    // app.get('/*', (req, res) => {
+    //  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    // });
 }
 
 const port = process.env.PORT || 5000;
