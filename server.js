@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
     // static folder
     console.log("Current directory:", __dirname); 
     app.get("*", (req, res) => {
-        res.sendFile(path.resolve("client", "build", "index.html"));
+        res.sendFile(path.resolve("./", "client", "build", "index.html"));
     });
 }
 
