@@ -14,7 +14,7 @@ app.use('/clients/data', clientsRouter);
 
 // serve static assets if in production
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+    app.use(express.static(path.join(__dirname, 'client', 'build')));
     // static folder
     console.log("Current directory:", __dirname); 
     app.get("*", (req, res) => {
