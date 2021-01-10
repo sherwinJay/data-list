@@ -14,6 +14,9 @@ router.get('/', (req, res) => {
     res.json(clientData);
 });
 
+console.log('data from server')
+console.log(rawdata)
+
 // Get Single Client
 router.get('/:id', (req, res) => {
     const foundClient = clientData.some( client => client.id === req.params.id);
